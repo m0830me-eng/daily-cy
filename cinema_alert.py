@@ -474,6 +474,13 @@ def normalize_event(date, row, target_type):
             or row.get("screenName")
         ),
         "time": clean_text(row.get("scnsrtTm")),
+        "end_time": clean_text(
+            row.get("scnendTm")
+            or row.get("scnEndTm")
+            or row.get("scnEndTime")
+            or row.get("endTime")
+            or row.get("scnendTime")
+        ),
         "status": status,
         "status_source": status_source,
         "link": make_booking_link(date, row),
@@ -489,6 +496,7 @@ def state_record(event, status=None):
         "movie": event.get("movie", ""),
         "screen": event.get("screen", ""),
         "time": event.get("time", ""),
+        "end_time": event.get("end_time", ""),
         "status_source": event.get("status_source", ""),
         "updated_at_kst": now_kst().isoformat(),
     }
@@ -603,12 +611,29 @@ def notification_title(event_type, alert_kind):
     return "🔎 특별 상영 일정이 감지됐습니다"
 
 
-def send_event_alert(event, alert_kind):
+def _alert_line(event):
     start = pretty_time(event.get("time", ""))
+    end = pretty_time(event.get("end_time", ""))
     movie = event.get("movie", "") or "영화명 미확인"
     screen = event.get("screen", "")
-    event_type = event.get("type", "")
     link = event.get("link", "")
+
+    time_text = f"{start}-{end}" if start and end else (start or "시간 미확인")
+    detail = f"{time_text} · {movie}"
+    if screen:
+        detail += f" · {screen}"
+
+    return f"🎟️ [{detail}]({link})"
+
+
+def _send_grouped_alert(group_items, alert_kind):
+    if not group_items:
+        return False
+
+    first = group_items[0]["event"]
+    event_type = first.get("type", "")
+    date = first.get("date", "")
+    link = first.get("link", "")
 
     lines = []
 
@@ -618,13 +643,14 @@ def send_event_alert(event, alert_kind):
     lines.extend([
         notification_title(event_type, alert_kind),
         f"[🎬 {SITE_NAME} · {event_type}]({link})",
-        f"📅 {pretty_date(event['date'])}",
+        f"📅 {pretty_date(date)}",
     ])
 
-    if screen:
-        lines.append(f"🎟 {start} · {movie} · {screen}")
-    else:
-        lines.append(f"🎟 {start} · {movie}")
+    for item in sorted(
+        group_items,
+        key=lambda x: clean_text(x["event"].get("time", ""))
+    ):
+        lines.append(_alert_line(item["event"]))
 
     ok = send_discord(
         webhook_for_type(event_type),
@@ -632,22 +658,16 @@ def send_event_alert(event, alert_kind):
     )
 
     if ok:
-        label = notification_title(event_type, alert_kind)
         print(
-            f"🔔 {label} | {event['date']} | {event_type} | "
-            f"{start} | {movie} | {screen}"
+            f"🔔 묶음 알림 | {date} | {event_type} | "
+            f"{notification_title(event_type, alert_kind)} | "
+            f"{len(group_items)}회차"
         )
 
     return ok
 
 
-def process_event(key, event, seen, booking_state):
-    """
-    Returns: (discord_alerts, soldout_changes)
-
-    SOLD_OUT은 내부 상태 판별용으로만 저장한다.
-    사용자 로그/Discord에는 매진이나 취소표 알림을 보내지 않는다.
-    """
+def _prepare_event_transition(key, event, seen, booking_state):
     current = event.get("status", "UNKNOWN")
     previous_record = booking_state.get(key)
     previous = (
@@ -655,70 +675,110 @@ def process_event(key, event, seen, booking_state):
         if isinstance(previous_record, dict)
         else "UNKNOWN"
     )
-
     is_new_key = key not in seen
-    alerts = 0
-    soldout_changes = 0
+
+    def pending(alert_kind, target_state):
+        return {
+            "key": key,
+            "event": event,
+            "alert_kind": alert_kind,
+            "target_state": target_state,
+            "mark_seen": is_new_key,
+        }
 
     if current == "UNKNOWN":
         if is_new_key:
-            if send_event_alert(event, "NEW"):
-                seen.add(key)
-                booking_state[key] = state_record(event, "UNKNOWN")
-                alerts += 1
-        return alerts, soldout_changes
+            return pending("NEW", "UNKNOWN")
+        return None
 
-    # 최초 발견이 이미 매진이면 사용자에게 알리지 않고 내부 상태만 기억.
     if current == "SOLD_OUT" and is_new_key:
         seen.add(key)
         booking_state[key] = state_record(event, "SOLD_OUT")
-        return alerts, soldout_changes
+        return None
 
-    # 새 회차가 준비중/오픈 상태로 처음 API에 등장.
     if is_new_key:
         alert_kind = "PREPARING" if current == "PREPARING" else "OPEN"
-        if send_event_alert(event, alert_kind):
-            seen.add(key)
-            booking_state[key] = state_record(event, current)
-            alerts += 1
-        return alerts, soldout_changes
+        return pending(alert_kind, current)
 
     if previous_record is None:
         previous = "UNKNOWN"
 
     if current == previous:
         booking_state[key] = state_record(event, current)
-        return alerts, soldout_changes
+        return None
 
     if previous == "UNKNOWN" and current in {"PREPARING", "OPEN"}:
         alert_kind = "PREPARING" if current == "PREPARING" else "OPEN"
-        if send_event_alert(event, alert_kind):
-            booking_state[key] = state_record(event, current)
-            alerts += 1
-        return alerts, soldout_changes
+        return pending(alert_kind, current)
 
     if previous == "PREPARING" and current == "OPEN":
-        if send_event_alert(event, "OPEN"):
-            booking_state[key] = state_record(event, "OPEN")
-            alerts += 1
-        return alerts, soldout_changes
+        return pending("OPEN", "OPEN")
 
-    # 어떤 상태든 -> 매진: 사용자에게는 아무것도 보여주지 않고 내부 상태만 갱신.
     if current == "SOLD_OUT":
         booking_state[key] = state_record(event, "SOLD_OUT")
-        return alerts, soldout_changes
+        return None
 
-    # 매진 -> OPEN: 취소표 알림 없이 내부 상태만 변경.
     if previous == "SOLD_OUT" and current == "OPEN":
         booking_state[key] = state_record(event, "OPEN")
-        return alerts, soldout_changes
+        return None
 
-    # OPEN/SOLD_OUT 뒤 PREPARING 흔들림은 기존 확정 상태 기억 유지.
     if current == "PREPARING" and previous in {"SOLD_OUT", "OPEN"}:
-        return alerts, soldout_changes
+        return None
 
     booking_state[key] = state_record(event, current)
-    return alerts, soldout_changes
+    return None
+
+
+def process_events_grouped(events, seen, booking_state):
+    pending_items = []
+
+    for key, event in events.items():
+        item = _prepare_event_transition(
+            key,
+            event,
+            seen,
+            booking_state,
+        )
+        if item is not None:
+            pending_items.append(item)
+
+    if not pending_items:
+        return 0, 0
+
+    groups = {}
+    for item in pending_items:
+        event = item["event"]
+        group_key = (
+            event.get("date", ""),
+            event.get("type", ""),
+            item["alert_kind"],
+        )
+        groups.setdefault(group_key, []).append(item)
+
+    discord_messages = 0
+
+    for group_key in sorted(groups):
+        items = groups[group_key]
+        alert_kind = group_key[2]
+
+        if not _send_grouped_alert(items, alert_kind):
+            continue
+
+        discord_messages += 1
+
+        for item in items:
+            key = item["key"]
+            event = item["event"]
+
+            if item["mark_seen"]:
+                seen.add(key)
+
+            booking_state[key] = state_record(
+                event,
+                item["target_state"],
+            )
+
+    return discord_messages, 0
 
 
 # ============================================================
@@ -945,10 +1005,13 @@ def run_0030_fast_scan(seen, booking_state, date_event_cache):
         success += 1
         date_event_cache[date] = events
 
-        for key, event in events.items():
-            a, s = process_event(key, event, seen, booking_state)
-            alerts += a
-            soldout_changes += s
+        a, s = process_events_grouped(
+            events,
+            seen,
+            booking_state,
+        )
+        alerts += a
+        soldout_changes += s
 
     save_seen(seen)
     save_booking_state(booking_state)
@@ -999,10 +1062,13 @@ def run_initial_monitor_scan(session, seen, booking_state):
 
         date_event_cache[date] = events
 
-        for key, event in events.items():
-            a, s = process_event(key, event, seen, booking_state)
-            alerts += a
-            soldout += s
+        a, s = process_events_grouped(
+            events,
+            seen,
+            booking_state,
+        )
+        alerts += a
+        soldout += s
 
         if index % 10 == 0:
             print(f"⏳ 첫 감시 준비: {index}/{DAYS} 날짜 확인 완료")
@@ -1168,17 +1234,11 @@ def run_monitor(session, seen, booking_state, program_started):
         window_success += 1
         date_event_cache[due_date] = events
 
-        cycle_alerts = 0
-        cycle_soldout = 0
-        for key, event in events.items():
-            alerts, soldout_changes = process_event(
-                key,
-                event,
-                seen,
-                booking_state,
-            )
-            cycle_alerts += alerts
-            cycle_soldout += soldout_changes
+        cycle_alerts, cycle_soldout = process_events_grouped(
+            events,
+            seen,
+            booking_state,
+        )
 
         window_alerts += cycle_alerts
         window_soldout += cycle_soldout
@@ -1210,7 +1270,7 @@ def main():
     program_started = time.monotonic()
 
     print("=" * 72)
-    print("CGV YONGSAN MONITOR")
+    print("CGV YEONGDEUNGPO MONITOR")
     print("=" * 72)
     print("BRANCH:", SITE_NAME)
     print("TARGET: GV / 무대인사 / IMAX")
