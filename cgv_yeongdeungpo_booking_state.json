@@ -1,6 +1,6 @@
 {
   "schema": "CGV_YEONGDEUNGPO_BOOKING_STATE_V1",
-  "updated_at_kst": "2026-09-05T11:30:59.754486+09:00",
+  "updated_at_kst": "2026-09-05T17:01:00.045231+09:00",
   "shows": {
     "0059|20260831|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -325,8 +325,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=2",
-      "updated_at_kst": "2026-09-05T11:26:51.806584+09:00"
+      "status_source": "frSeatCnt=4",
+      "updated_at_kst": "2026-09-05T14:14:08.600013+09:00"
     },
     "0059|20260905|30001323|017|4|1730|IMAX": {
       "status": "OPEN",
@@ -336,8 +336,8 @@
       "screen": "IMAX관",
       "time": "1730",
       "end_time": "2032",
-      "status_source": "frSeatCnt=4",
-      "updated_at_kst": "2026-09-05T11:26:51.806600+09:00"
+      "status_source": "frSeatCnt=6",
+      "updated_at_kst": "2026-09-05T16:59:23.029714+09:00"
     },
     "0059|20260905|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -347,8 +347,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=7",
-      "updated_at_kst": "2026-09-05T11:26:51.806605+09:00"
+      "status_source": "frSeatCnt=8",
+      "updated_at_kst": "2026-09-05T16:59:23.029735+09:00"
     },
     "0059|20260905|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -358,8 +358,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=45",
-      "updated_at_kst": "2026-09-05T11:26:51.806609+09:00"
+      "status_source": "frSeatCnt=38",
+      "updated_at_kst": "2026-09-05T16:59:23.029739+09:00"
     },
     "0059|20260906|30001350|003|2|1320|무대인사": {
       "status": "OPEN",
@@ -369,8 +369,8 @@
       "screen": "3관 (Laser)",
       "time": "1320",
       "end_time": "1521",
-      "status_source": "frSeatCnt=50",
-      "updated_at_kst": "2026-09-05T11:30:47.623005+09:00"
+      "status_source": "frSeatCnt=53",
+      "updated_at_kst": "2026-09-05T17:00:41.294105+09:00"
     },
     "0059|20260906|30001350|004|2|1310|무대인사": {
       "status": "OPEN",
@@ -380,8 +380,8 @@
       "screen": "4관[DOLBY ATMOS] (Laser)",
       "time": "1310",
       "end_time": "1511",
-      "status_source": "frSeatCnt=40",
-      "updated_at_kst": "2026-09-05T11:30:47.623021+09:00"
+      "status_source": "frSeatCnt=39",
+      "updated_at_kst": "2026-09-05T17:00:41.294126+09:00"
     },
     "0059|20260906|30001350|004|3|1540|무대인사": {
       "status": "OPEN",
@@ -391,8 +391,8 @@
       "screen": "4관[DOLBY ATMOS] (Laser)",
       "time": "1540",
       "end_time": "1741",
-      "status_source": "frSeatCnt=33",
-      "updated_at_kst": "2026-09-05T11:30:47.623025+09:00"
+      "status_source": "frSeatCnt=35",
+      "updated_at_kst": "2026-09-05T17:00:41.294132+09:00"
     },
     "0059|20260906|30001338|006|3|1535|무대인사": {
       "status": "OPEN",
@@ -402,8 +402,8 @@
       "screen": "6관 (Laser)",
       "time": "1535",
       "end_time": "1734",
-      "status_source": "frSeatCnt=14",
-      "updated_at_kst": "2026-09-05T11:30:47.623030+09:00"
+      "status_source": "frSeatCnt=31",
+      "updated_at_kst": "2026-09-05T17:00:41.294135+09:00"
     },
     "0059|20260906|30001338|006|4|1755|무대인사": {
       "status": "OPEN",
@@ -413,8 +413,8 @@
       "screen": "6관 (Laser)",
       "time": "1755",
       "end_time": "1954",
-      "status_source": "frSeatCnt=26",
-      "updated_at_kst": "2026-09-05T11:30:47.623034+09:00"
+      "status_source": "frSeatCnt=32",
+      "updated_at_kst": "2026-09-05T17:00:41.294139+09:00"
     },
     "0059|20260906|30001338|008|3|1545|무대인사": {
       "status": "OPEN",
@@ -424,8 +424,8 @@
       "screen": "8관 (Laser)",
       "time": "1545",
       "end_time": "1744",
-      "status_source": "frSeatCnt=27",
-      "updated_at_kst": "2026-09-05T11:30:47.623037+09:00"
+      "status_source": "frSeatCnt=22",
+      "updated_at_kst": "2026-09-05T17:00:41.294143+09:00"
     },
     "0059|20260906|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -435,8 +435,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=16",
-      "updated_at_kst": "2026-09-05T11:30:47.623040+09:00"
+      "status_source": "frSeatCnt=14",
+      "updated_at_kst": "2026-09-05T17:00:41.294147+09:00"
     },
     "0059|20260906|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -446,8 +446,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=7",
-      "updated_at_kst": "2026-09-05T11:30:47.623043+09:00"
+      "status_source": "frSeatCnt=10",
+      "updated_at_kst": "2026-09-05T17:00:41.294150+09:00"
     },
     "0059|20260906|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -457,8 +457,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=5",
-      "updated_at_kst": "2026-09-05T11:30:47.623047+09:00"
+      "status_source": "frSeatCnt=6",
+      "updated_at_kst": "2026-09-05T17:00:41.294154+09:00"
     },
     "0059|20260906|30001323|017|4|1730|IMAX": {
       "status": "OPEN",
@@ -468,8 +468,8 @@
       "screen": "IMAX관",
       "time": "1730",
       "end_time": "2032",
-      "status_source": "frSeatCnt=7",
-      "updated_at_kst": "2026-09-05T11:30:47.623050+09:00"
+      "status_source": "frSeatCnt=9",
+      "updated_at_kst": "2026-09-05T17:00:41.294157+09:00"
     },
     "0059|20260906|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -479,8 +479,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=39",
-      "updated_at_kst": "2026-09-05T11:30:47.623053+09:00"
+      "status_source": "frSeatCnt=37",
+      "updated_at_kst": "2026-09-05T17:00:41.294161+09:00"
     },
     "0059|20260906|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -490,8 +490,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=156",
-      "updated_at_kst": "2026-09-05T11:30:47.623056+09:00"
+      "status_source": "frSeatCnt=151",
+      "updated_at_kst": "2026-09-05T17:00:41.294165+09:00"
     },
     "0059|20260907|30001323|017|1|0830|IMAX": {
       "status": "OPEN",
@@ -501,8 +501,8 @@
       "screen": "IMAX관",
       "time": "0830",
       "end_time": "1132",
-      "status_source": "frSeatCnt=112",
-      "updated_at_kst": "2026-09-05T11:30:43.985904+09:00"
+      "status_source": "frSeatCnt=110",
+      "updated_at_kst": "2026-09-05T17:00:14.195211+09:00"
     },
     "0059|20260907|30001323|017|2|1230|IMAX": {
       "status": "OPEN",
@@ -513,7 +513,7 @@
       "time": "1230",
       "end_time": "1532",
       "status_source": "frSeatCnt=67",
-      "updated_at_kst": "2026-09-05T11:30:43.985920+09:00"
+      "updated_at_kst": "2026-09-05T17:00:14.195232+09:00"
     },
     "0059|20260907|30001323|017|3|1600|IMAX": {
       "status": "OPEN",
@@ -523,8 +523,8 @@
       "screen": "IMAX관",
       "time": "1600",
       "end_time": "1902",
-      "status_source": "frSeatCnt=52",
-      "updated_at_kst": "2026-09-05T11:30:43.985925+09:00"
+      "status_source": "frSeatCnt=48",
+      "updated_at_kst": "2026-09-05T17:00:14.195236+09:00"
     },
     "0059|20260907|30001323|017|4|1930|IMAX": {
       "status": "OPEN",
@@ -534,8 +534,8 @@
       "screen": "IMAX관",
       "time": "1930",
       "end_time": "2232",
-      "status_source": "frSeatCnt=43",
-      "updated_at_kst": "2026-09-05T11:30:43.985930+09:00"
+      "status_source": "frSeatCnt=42",
+      "updated_at_kst": "2026-09-05T17:00:14.195240+09:00"
     },
     "0059|20260907|30001323|017|5|2300|IMAX": {
       "status": "OPEN",
@@ -546,7 +546,7 @@
       "time": "2300",
       "end_time": "2602",
       "status_source": "frSeatCnt=150",
-      "updated_at_kst": "2026-09-05T11:30:43.985933+09:00"
+      "updated_at_kst": "2026-09-05T17:00:14.195243+09:00"
     },
     "0059|20260908|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -556,8 +556,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=196",
-      "updated_at_kst": "2026-09-05T11:29:32.303371+09:00"
+      "status_source": "frSeatCnt=197",
+      "updated_at_kst": "2026-09-05T17:00:44.605118+09:00"
     },
     "0059|20260908|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -567,8 +567,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=71",
-      "updated_at_kst": "2026-09-05T11:29:32.303385+09:00"
+      "status_source": "frSeatCnt=70",
+      "updated_at_kst": "2026-09-05T17:00:44.605139+09:00"
     },
     "0059|20260908|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -578,8 +578,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=57",
-      "updated_at_kst": "2026-09-05T11:29:32.303390+09:00"
+      "status_source": "frSeatCnt=58",
+      "updated_at_kst": "2026-09-05T17:00:44.605144+09:00"
     },
     "0059|20260908|30001323|017|4|1730|IMAX": {
       "status": "OPEN",
@@ -590,7 +590,7 @@
       "time": "1730",
       "end_time": "2032",
       "status_source": "frSeatCnt=63",
-      "updated_at_kst": "2026-09-05T11:29:32.303393+09:00"
+      "updated_at_kst": "2026-09-05T17:00:44.605148+09:00"
     },
     "0059|20260908|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -600,8 +600,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=61",
-      "updated_at_kst": "2026-09-05T11:29:32.303397+09:00"
+      "status_source": "frSeatCnt=56",
+      "updated_at_kst": "2026-09-05T17:00:44.605151+09:00"
     },
     "0059|20260908|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -611,8 +611,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=219",
-      "updated_at_kst": "2026-09-05T11:29:32.303400+09:00"
+      "status_source": "frSeatCnt=220",
+      "updated_at_kst": "2026-09-05T17:00:44.605155+09:00"
     },
     "0059|20260909|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -622,8 +622,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=314",
-      "updated_at_kst": "2026-09-05T11:30:01.149483+09:00"
+      "status_source": "frSeatCnt=310",
+      "updated_at_kst": "2026-09-05T17:00:01.733239+09:00"
     },
     "0059|20260909|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -633,8 +633,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=148",
-      "updated_at_kst": "2026-09-05T11:30:01.149515+09:00"
+      "status_source": "frSeatCnt=133",
+      "updated_at_kst": "2026-09-05T17:00:01.733269+09:00"
     },
     "0059|20260909|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -644,8 +644,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=142",
-      "updated_at_kst": "2026-09-05T11:30:01.149525+09:00"
+      "status_source": "frSeatCnt=130",
+      "updated_at_kst": "2026-09-05T17:00:01.733277+09:00"
     },
     "0059|20260909|30001323|017|4|1730|IMAX": {
       "status": "OPEN",
@@ -655,8 +655,8 @@
       "screen": "IMAX관",
       "time": "1730",
       "end_time": "2032",
-      "status_source": "frSeatCnt=143",
-      "updated_at_kst": "2026-09-05T11:30:01.149533+09:00"
+      "status_source": "frSeatCnt=137",
+      "updated_at_kst": "2026-09-05T17:00:01.733287+09:00"
     },
     "0059|20260909|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -666,8 +666,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=167",
-      "updated_at_kst": "2026-09-05T11:30:01.149539+09:00"
+      "status_source": "frSeatCnt=162",
+      "updated_at_kst": "2026-09-05T17:00:01.733297+09:00"
     },
     "0059|20260909|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -677,8 +677,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=347",
-      "updated_at_kst": "2026-09-05T11:30:01.149547+09:00"
+      "status_source": "frSeatCnt=343",
+      "updated_at_kst": "2026-09-05T17:00:01.733304+09:00"
     },
     "0059|20260910|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -688,8 +688,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=327",
-      "updated_at_kst": "2026-09-05T11:30:57.945430+09:00"
+      "status_source": "frSeatCnt=318",
+      "updated_at_kst": "2026-09-05T17:00:58.336746+09:00"
     },
     "0059|20260910|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -699,8 +699,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=158",
-      "updated_at_kst": "2026-09-05T11:30:57.945443+09:00"
+      "status_source": "frSeatCnt=160",
+      "updated_at_kst": "2026-09-05T17:00:58.336767+09:00"
     },
     "0059|20260910|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -710,8 +710,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=178",
-      "updated_at_kst": "2026-09-05T11:30:57.945449+09:00"
+      "status_source": "frSeatCnt=160",
+      "updated_at_kst": "2026-09-05T17:00:58.336772+09:00"
     },
     "0059|20260910|30001323|017|4|1730|IMAX": {
       "status": "OPEN",
@@ -721,8 +721,8 @@
       "screen": "IMAX관",
       "time": "1730",
       "end_time": "2032",
-      "status_source": "frSeatCnt=150",
-      "updated_at_kst": "2026-09-05T11:30:57.945453+09:00"
+      "status_source": "frSeatCnt=148",
+      "updated_at_kst": "2026-09-05T17:00:58.336776+09:00"
     },
     "0059|20260910|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -732,8 +732,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=162",
-      "updated_at_kst": "2026-09-05T11:30:57.945457+09:00"
+      "status_source": "frSeatCnt=152",
+      "updated_at_kst": "2026-09-05T17:00:58.336780+09:00"
     },
     "0059|20260910|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -743,8 +743,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=339",
-      "updated_at_kst": "2026-09-05T11:30:57.945460+09:00"
+      "status_source": "frSeatCnt=329",
+      "updated_at_kst": "2026-09-05T17:00:58.336784+09:00"
     },
     "0059|20260911|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -754,8 +754,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=324",
-      "updated_at_kst": "2026-09-05T11:30:58.277022+09:00"
+      "status_source": "frSeatCnt=314",
+      "updated_at_kst": "2026-09-05T17:00:59.148950+09:00"
     },
     "0059|20260911|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -765,8 +765,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=154",
-      "updated_at_kst": "2026-09-05T11:30:58.277039+09:00"
+      "status_source": "frSeatCnt=150",
+      "updated_at_kst": "2026-09-05T17:00:59.148973+09:00"
     },
     "0059|20260911|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -776,8 +776,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=131",
-      "updated_at_kst": "2026-09-05T11:30:58.277047+09:00"
+      "status_source": "frSeatCnt=124",
+      "updated_at_kst": "2026-09-05T17:00:59.148978+09:00"
     },
     "0059|20260911|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -787,8 +787,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=61",
-      "updated_at_kst": "2026-09-05T11:30:58.277051+09:00"
+      "status_source": "frSeatCnt=58",
+      "updated_at_kst": "2026-09-05T17:00:59.148982+09:00"
     },
     "0059|20260911|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -798,8 +798,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=198",
-      "updated_at_kst": "2026-09-05T11:30:58.277055+09:00"
+      "status_source": "frSeatCnt=192",
+      "updated_at_kst": "2026-09-05T17:00:59.148986+09:00"
     },
     "0059|20260912|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -809,8 +809,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=111",
-      "updated_at_kst": "2026-09-05T11:30:58.573802+09:00"
+      "status_source": "frSeatCnt=104",
+      "updated_at_kst": "2026-09-05T17:00:59.667500+09:00"
     },
     "0059|20260912|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -820,8 +820,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=40",
-      "updated_at_kst": "2026-09-05T11:30:58.573814+09:00"
+      "status_source": "frSeatCnt=42",
+      "updated_at_kst": "2026-09-05T17:00:59.667522+09:00"
     },
     "0059|20260912|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -831,8 +831,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=47",
-      "updated_at_kst": "2026-09-05T11:30:58.573822+09:00"
+      "status_source": "frSeatCnt=41",
+      "updated_at_kst": "2026-09-05T17:00:59.667532+09:00"
     },
     "0059|20260912|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -842,8 +842,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=162",
-      "updated_at_kst": "2026-09-05T11:30:58.573825+09:00"
+      "status_source": "frSeatCnt=154",
+      "updated_at_kst": "2026-09-05T17:00:59.667536+09:00"
     },
     "0059|20260913|30001323|017|1|0700|IMAX": {
       "status": "OPEN",
@@ -853,8 +853,8 @@
       "screen": "IMAX관",
       "time": "0700",
       "end_time": "1002",
-      "status_source": "frSeatCnt=117",
-      "updated_at_kst": "2026-09-05T11:30:58.966715+09:00"
+      "status_source": "frSeatCnt=101",
+      "updated_at_kst": "2026-09-05T17:00:30.121022+09:00"
     },
     "0059|20260913|30001323|017|2|1030|IMAX": {
       "status": "OPEN",
@@ -864,8 +864,8 @@
       "screen": "IMAX관",
       "time": "1030",
       "end_time": "1332",
-      "status_source": "frSeatCnt=40",
-      "updated_at_kst": "2026-09-05T11:30:58.966727+09:00"
+      "status_source": "frSeatCnt=37",
+      "updated_at_kst": "2026-09-05T17:00:30.121057+09:00"
     },
     "0059|20260913|30001323|017|5|2100|IMAX": {
       "status": "OPEN",
@@ -875,8 +875,8 @@
       "screen": "IMAX관",
       "time": "2100",
       "end_time": "2402",
-      "status_source": "frSeatCnt=130",
-      "updated_at_kst": "2026-09-05T11:30:58.966737+09:00"
+      "status_source": "frSeatCnt=118",
+      "updated_at_kst": "2026-09-05T17:00:30.121066+09:00"
     },
     "0059|20260914|30001323|017|1|0830|IMAX": {
       "status": "OPEN",
@@ -886,8 +886,8 @@
       "screen": "IMAX관",
       "time": "0830",
       "end_time": "1132",
-      "status_source": "frSeatCnt=288",
-      "updated_at_kst": "2026-09-05T11:30:29.810441+09:00"
+      "status_source": "frSeatCnt=283",
+      "updated_at_kst": "2026-09-05T17:00:32.291646+09:00"
     },
     "0059|20260914|30001323|017|2|1200|IMAX": {
       "status": "OPEN",
@@ -897,8 +897,8 @@
       "screen": "IMAX관",
       "time": "1200",
       "end_time": "1502",
-      "status_source": "frSeatCnt=197",
-      "updated_at_kst": "2026-09-05T11:30:29.810453+09:00"
+      "status_source": "frSeatCnt=188",
+      "updated_at_kst": "2026-09-05T17:00:32.291668+09:00"
     },
     "0059|20260914|30001323|017|5|2230|IMAX": {
       "status": "OPEN",
@@ -908,8 +908,8 @@
       "screen": "IMAX관",
       "time": "2230",
       "end_time": "2532",
-      "status_source": "frSeatCnt=301",
-      "updated_at_kst": "2026-09-05T11:30:29.810467+09:00"
+      "status_source": "frSeatCnt=288",
+      "updated_at_kst": "2026-09-05T17:00:32.291681+09:00"
     },
     "0059|20260912|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -919,8 +919,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=34",
-      "updated_at_kst": "2026-09-05T11:30:58.573818+09:00"
+      "status_source": "frSeatCnt=32",
+      "updated_at_kst": "2026-09-05T17:00:59.667527+09:00"
     },
     "0059|20260913|30001323|017|3|1400|IMAX": {
       "status": "OPEN",
@@ -930,8 +930,8 @@
       "screen": "IMAX관",
       "time": "1400",
       "end_time": "1702",
-      "status_source": "frSeatCnt=34",
-      "updated_at_kst": "2026-09-05T11:30:58.966733+09:00"
+      "status_source": "frSeatCnt=27",
+      "updated_at_kst": "2026-09-05T17:00:30.121062+09:00"
     },
     "0059|20260913|30001323|017|6|2430|IMAX": {
       "status": "OPEN",
@@ -941,8 +941,8 @@
       "screen": "IMAX관",
       "time": "2430",
       "end_time": "2732",
-      "status_source": "frSeatCnt=325",
-      "updated_at_kst": "2026-09-05T11:30:58.966741+09:00"
+      "status_source": "frSeatCnt=320",
+      "updated_at_kst": "2026-09-05T17:00:30.121070+09:00"
     },
     "0059|20260914|30001323|017|3|1530|IMAX": {
       "status": "OPEN",
@@ -952,8 +952,8 @@
       "screen": "IMAX관",
       "time": "1530",
       "end_time": "1832",
-      "status_source": "frSeatCnt=186",
-      "updated_at_kst": "2026-09-05T11:30:29.810459+09:00"
+      "status_source": "frSeatCnt=180",
+      "updated_at_kst": "2026-09-05T17:00:32.291673+09:00"
     },
     "0059|20260914|30001323|017|4|1900|IMAX": {
       "status": "OPEN",
@@ -963,8 +963,8 @@
       "screen": "IMAX관",
       "time": "1900",
       "end_time": "2202",
-      "status_source": "frSeatCnt=139",
-      "updated_at_kst": "2026-09-05T11:30:29.810463+09:00"
+      "status_source": "frSeatCnt=136",
+      "updated_at_kst": "2026-09-05T17:00:32.291677+09:00"
     },
     "0059|20260915|30001323|017|1|0800|IMAX": {
       "status": "OPEN",
@@ -975,7 +975,7 @@
       "time": "0800",
       "end_time": "1102",
       "status_source": "frSeatCnt=329",
-      "updated_at_kst": "2026-09-05T11:30:31.921687+09:00"
+      "updated_at_kst": "2026-09-05T17:00:32.632251+09:00"
     },
     "0059|20260915|30001323|017|2|1130|IMAX": {
       "status": "OPEN",
@@ -985,8 +985,8 @@
       "screen": "IMAX관",
       "time": "1130",
       "end_time": "1432",
-      "status_source": "frSeatCnt=214",
-      "updated_at_kst": "2026-09-05T11:30:31.921702+09:00"
+      "status_source": "frSeatCnt=208",
+      "updated_at_kst": "2026-09-05T17:00:32.632272+09:00"
     },
     "0059|20260915|30001323|017|3|1500|IMAX": {
       "status": "OPEN",
@@ -996,8 +996,8 @@
       "screen": "IMAX관",
       "time": "1500",
       "end_time": "1802",
-      "status_source": "frSeatCnt=195",
-      "updated_at_kst": "2026-09-05T11:30:31.921707+09:00"
+      "status_source": "frSeatCnt=188",
+      "updated_at_kst": "2026-09-05T17:00:32.632277+09:00"
     },
     "0059|20260915|30001323|017|4|1830|IMAX": {
       "status": "OPEN",
@@ -1007,8 +1007,8 @@
       "screen": "IMAX관",
       "time": "1830",
       "end_time": "2132",
-      "status_source": "frSeatCnt=166",
-      "updated_at_kst": "2026-09-05T11:30:31.921712+09:00"
+      "status_source": "frSeatCnt=157",
+      "updated_at_kst": "2026-09-05T17:00:32.632282+09:00"
     },
     "0059|20260915|30001323|017|5|2200|IMAX": {
       "status": "OPEN",
@@ -1018,8 +1018,8 @@
       "screen": "IMAX관",
       "time": "2200",
       "end_time": "2502",
-      "status_source": "frSeatCnt=272",
-      "updated_at_kst": "2026-09-05T11:30:31.921716+09:00"
+      "status_source": "frSeatCnt=261",
+      "updated_at_kst": "2026-09-05T17:00:32.632286+09:00"
     }
   }
 }
